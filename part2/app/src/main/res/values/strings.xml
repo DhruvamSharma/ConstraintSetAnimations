@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">part2</string>
+    <string name="java_image_text">Java Image</string>
+    <string name="java">Java</string>
+    <string name="java_text_on_click">This title is huge and it belongs to the java content and we are about to see the click on java TextView</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="kotlin_image_text">Kotlin Image</string>
+</resources>
