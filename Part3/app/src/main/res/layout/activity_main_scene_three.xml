@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8ff"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/gift_card_one_cv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="32dp"
+        android:alpha="0"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gift_card">
+
+            <TextView
+                android:id="@+id/caption_gift_card_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ghostWhite"
+                android:text="Buy the best products this diwali!"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+                app:layout_constraintEnd_toEndOf="@id/title_gift_card_tv"
+                app:layout_constraintTop_toBottomOf="@id/title_gift_card_tv"/>
+
+            <TextView
+                android:id="@+id/title_gift_card_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ghostWhite"
+                android:text="Get offer now upto 50%"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+                android:textStyle="bold"
+
+                android:layout_margin="32dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_margin="16dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/heading_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summer"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:alpha="0"
+
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:fontFamily="@font/open_sans_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gift_card_one_cv" />
+
+    <include
+        android:id="@+id/shop_card_layout"
+        layout="@layout/shop_card_one"
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:alpha="0"
+        android:visibility="invisible"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/heading_tv"
+        app:layout_constraintTop_toBottomOf="@+id/heading_tv" />
+
+
+    <!--<android.support.v7.widget.CardView
+        android:id="@+id/product_image_cv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:cardElevation="32dp"
+
+        app:layout_constraintStart_toStartOf="@id/heading_tv"
+        app:layout_constraintTop_toBottomOf="@id/heading_tv">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/product_image"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/title_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mona Lisa"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+
+        app:layout_constraintStart_toStartOf="@id/product_image_cv"
+        app:layout_constraintTop_toBottomOf="@id/product_image_cv" />
+
+    <TextView
+        android:id="@+id/views_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10045 views | "
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintStart_toStartOf="@id/title_text_tv"
+        app:layout_constraintTop_toBottomOf="@id/title_text_tv" />
+
+
+    <TextView
+        android:id="@+id/comments_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1833 comments"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintTop_toTopOf="@id/views_tv"
+        app:layout_constraintBottom_toBottomOf="@id/views_tv"
+        app:layout_constraintStart_toEndOf="@id/views_tv"/>
+
+
+    <TextView
+        android:id="@+id/previous_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 45,0000"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintStart_toStartOf="@id/views_tv"
+        app:layout_constraintTop_toBottomOf="@id/views_tv" />
+
+
+    <TextView
+        android:id="@+id/discount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Save Rs 9,000"
+        android:textColor="#2196F3"
+        android:layout_marginLeft="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintTop_toTopOf="@id/previous_price_tv"
+        app:layout_constraintBottom_toBottomOf="@id/previous_price_tv"
+        app:layout_constraintStart_toEndOf="@id/previous_price_tv"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/new_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 36,0000"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+        app:layout_constraintStart_toStartOf="@id/previous_price_tv"
+        app:layout_constraintTop_toBottomOf="@id/previous_price_tv" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divider_view"
+        android:background="#c7c9ca"
+        android:layout_margin="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_price_tv"/>
+
+
+    <TextView
+        android:id="@+id/description_label_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+
+        app:layout_constraintStart_toStartOf="@id/new_price_tv"
+        app:layout_constraintTop_toBottomOf="@id/divider_view"/>
+
+    <TextView
+        android:id="@+id/description_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This product is on sale for many people but people got to buy stuff like this because this is the trend! Keep following thi trend as always!"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintStart_toStartOf="@id/description_label_tv"
+        app:layout_constraintTop_toBottomOf="@id/description_label_tv" />
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ADDAE6"
+        android:text="Buy Now"
+        android:textColor="#000"
+        android:id="@+id/buy_button_btn"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cancel_button_ib"/>
+
+    <ImageButton
+        android:id="@+id/cancel_button_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:srcCompat="@android:drawable/ic_menu_compass"
+        android:alpha="0"
+        android:background=" #008080"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buy_button_btn"/> -->
+
+
+    <TextView
+        android:id="@+id/scene_two_choose_card_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your card: "
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:alpha="0"
+
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:fontFamily="@font/open_sans_light"
+        app:layout_constraintStart_toStartOf="@id/shop_card_layout"
+        app:layout_constraintTop_toBottomOf="@id/shop_card_layout" />
+
+
+    <include layout="@layout/creditcard_layout"
+        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:visibility="invisible"
+        android:id="@+id/credit_card_layout"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="@id/scene_two_choose_card_tv"
+        app:layout_constraintTop_toBottomOf="@id/scene_two_choose_card_tv"/>
+
+    <TextView
+        android:id="@+id/scene_two_add_card_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a card"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:alpha="0"
+
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        app:fontFamily="@font/open_sans_light"
+        app:layout_constraintStart_toStartOf="@id/credit_card_layout"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_layout"/>
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f4c804"
+        android:text="Buy Now"
+        android:textColor="#000"
+        android:id="@+id/buy_button_btn"
+        android:alpha="0"
+
+        app:layout_constraintStart_toEndOf="@id/cancel_button_ib"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/cancel_button_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Select a card"
+        android:background="#d71db8"
+        android:alpha="0"
+        android:textColor="#FFF"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buy_button_btn"/>
+
+    <Button
+        android:id="@+id/go_back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Congratulations, Keep Shopping!"
+        android:background="#d72c1d"
+        android:alpha="1"
+        android:textColor="#FFF"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cancel_button_ib"/>
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_fileName="checkmark_animation.json"
+        android:alpha="1"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

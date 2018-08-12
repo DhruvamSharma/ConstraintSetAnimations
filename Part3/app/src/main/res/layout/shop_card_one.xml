@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shop_card_image_iv"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/dress_two"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shop_card_price_tv"
+        android:text="Rs 3200"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shop_card_image_iv"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shop_card_product_name_tv"
+        android:text="Gir's Top | Blue"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@id/shop_card_price_tv"
+        app:layout_constraintTop_toBottomOf="@+id/shop_card_price_tv"/>
+
+
+    <TextView
+        android:id="@+id/views_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10045 views | "
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintStart_toStartOf="@id/shop_card_product_name_tv"
+        app:layout_constraintTop_toBottomOf="@id/shop_card_product_name_tv" />
+
+
+    <TextView
+        android:id="@+id/comments_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1833 comments"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintTop_toTopOf="@id/views_tv"
+        app:layout_constraintBottom_toBottomOf="@id/views_tv"
+        app:layout_constraintStart_toEndOf="@id/views_tv"/>
+
+
+    <TextView
+        android:id="@+id/previous_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 45,0000"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintStart_toStartOf="@id/views_tv"
+        app:layout_constraintTop_toBottomOf="@id/views_tv" />
+
+
+    <TextView
+        android:id="@+id/discount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Save Rs 9,000"
+        android:textColor="#2196F3"
+        android:layout_marginLeft="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+
+        app:layout_constraintTop_toTopOf="@id/previous_price_tv"
+        app:layout_constraintBottom_toBottomOf="@id/previous_price_tv"
+        app:layout_constraintStart_toEndOf="@id/previous_price_tv"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/new_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 36,0000"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+
+        app:layout_constraintStart_toStartOf="@id/previous_price_tv"
+        app:layout_constraintTop_toBottomOf="@id/previous_price_tv" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
