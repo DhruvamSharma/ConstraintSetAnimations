@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Part3</string>
+
+    <string name="default_credit_card_number">5267 **** **** ****</string>
+    <string name="default_credit_card_expiry_date">12/23</string>
+    <string name="default_credit_card_cvv">***</string>
 </resources>

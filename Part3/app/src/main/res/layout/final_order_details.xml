@@ -8,24 +8,25 @@
 
 
     <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/shop_card_image_iv"
         app:cardCornerRadius="8dp"
-        app:cardElevation="16dp">
+        app:cardElevation="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/dress_two"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:srcCompat="@drawable/dress_two" />
 
 
     </android.support.v7.widget.CardView>
+
 
 
 
@@ -34,9 +35,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/shop_card_product_name_tv"
         android:text="Gir's Top | Blue"
+        android:layout_marginStart="16dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shop_card_image_iv"/>
+
+        app:layout_constraintTop_toTopOf="@id/shop_card_image_iv"
+        app:layout_constraintStart_toEndOf="@id/shop_card_image_iv"/>
 
 
     <TextView

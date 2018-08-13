@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/finish_root"
+    tools:context=".FinishActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choose_card_label"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:text="Choose Payment Method:"
+        android:layout_margin="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_list_rv"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintStart_toStartOf="@id/choose_card_label"
+        app:layout_constraintTop_toBottomOf="@id/choose_card_label"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_detail_label"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="Your Product Details"
+        android:layout_margin="16dp"
+
+        app:layout_constraintStart_toStartOf="@id/card_list_rv"
+        app:layout_constraintTop_toBottomOf="@id/card_list_rv"/>
+
+
+    <include
+        android:id="@+id/shop_card_layout"
+        layout="@layout/final_order_details"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_margin="32dp"
+        app:layout_constraintStart_toStartOf="@id/product_detail_label"
+        app:layout_constraintTop_toBottomOf="@+id/product_detail_label" />
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:id="@+id/submit_button"
+        android:text="Submit"
+        android:textColor="@color/ghostWhite"
+        android:elevation="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shop_card_layout"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

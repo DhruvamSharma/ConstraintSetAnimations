@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="16dp"
+    android:background="@drawable/address_background">
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/credit_card_number_et"
+        android:text="1032, Preet Nagar, Ambala, Haryana, 134003"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="16dp"
+        android:textColor="@color/ghostWhite"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <Button
+        android:id="@+id/alert_dialog_add_card_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELIVER HERE"
+        android:onClick="addCard"
+        android:textColor="@color/ghostWhite"
+        android:background="@drawable/button_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/credit_card_number_et"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

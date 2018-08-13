@@ -3,10 +3,13 @@ package com.udafil.dhruvamsharma.part3;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Build;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.ChangeBounds;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     LottieAnimationView animationView, heartAnimation;
     ConstraintLayout creditCard;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +44,11 @@ public class MainActivity extends AppCompatActivity {
         animationView = findViewById(R.id.lottieAnimationView);
         heartAnimation = findViewById(R.id.heartAnimation);
 
-        creditCard = findViewById(R.id.credit_card_layout);
+        /*creditCard = findViewById(R.id.credit_card_layout);*/
+
+        TextView textView = findViewById(R.id.previous_price_tv);
+        textView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+
 
         startAnimations();
     }
@@ -71,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     constraintSet = constraintSetEnd;
-                    TextView textView = findViewById(R.id.previous_price_tv);
-                    textView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+
 
 
                 constraintSet.applyTo((ConstraintLayout) findViewById(R.id.root));
@@ -89,9 +96,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                     constraintSet = constraintSetFinish;
-                    startCheckAnimation();
+                    //TODO
+                    //startCheckAnimation();
 
-                constraintSet.applyTo(findViewById(R.id.root));
+                //constraintSet.applyTo(findViewById(R.id.root));
+
+                Intent intent = new Intent(this, FinishActivity.class);
+                startActivity(intent);
 
             }
 
@@ -114,13 +125,13 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
-        creditCard.setOnClickListener(view -> {
+        //TODO
+        /*creditCard.setOnClickListener(view -> {
 
 
             startLikeAnimation();
 
-        });
+        });*/
 
     }
 
@@ -149,4 +160,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+    public void addCard(View view) {
+
+        /**
+         * Method to be used on click of add card button in alert_dialog_layout.xml
+         */
+
+    }
+
+    public void addCardDialog(View view) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme);
+
+        View view1 = View.inflate(this, R.layout.alert_dialog_layout, null);
+
+        builder.setView(view1);
+
+        AlertDialog dialog = builder.create();
+        // display dialog
+        dialog.show();
+
+
+    }
+
+
+    private void selectAddressAnimation() {
+
+
+
+    }
 }

@@ -256,29 +256,42 @@
         app:layout_constraintTop_toBottomOf="@id/shop_card_layout" />
 
 
-    <include layout="@layout/creditcard_layout"
+    <include layout="@layout/adress_layout"
         android:layout_height="200dp"
-        android:layout_width="400dp"
+        android:layout_width="300dp"
         android:visibility="invisible"
-        android:id="@+id/credit_card_layout"
+        android:id="@+id/address_one"
         android:layout_marginTop="16dp"
 
         app:layout_constraintStart_toStartOf="@id/scene_two_choose_card_tv"
         app:layout_constraintTop_toBottomOf="@id/scene_two_choose_card_tv"/>
 
-    <TextView
+
+    <include layout="@layout/adress_layout"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:visibility="invisible"
+        android:id="@+id/address_two"
+
+        app:layout_constraintTop_toTopOf="@id/address_one"
+        app:layout_constraintBottom_toBottomOf="@id/address_one"
+        app:layout_constraintStart_toEndOf="@id/address_one"/>
+
+    <Button
         android:id="@+id/scene_two_add_card_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add a card"
         android:textStyle="bold"
         android:layout_marginTop="32dp"
+        android:background="@drawable/button_border"
         android:alpha="0"
 
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         app:fontFamily="@font/open_sans_light"
-        app:layout_constraintStart_toStartOf="@id/credit_card_layout"
-        app:layout_constraintTop_toBottomOf="@id/credit_card_layout"/>
+        app:layout_constraintEnd_toEndOf="@id/address_one"
+        app:layout_constraintTop_toBottomOf="@id/address_one"/>
+
 
 
 
