@@ -21,7 +21,8 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/credit_card">
+            android:id="@+id/selected_card"
+            android:background="@drawable/unselected_card">
 
 
             <com.airbnb.lottie.LottieAnimationView

@@ -26,8 +26,8 @@ import com.airbnb.lottie.LottieAnimationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    LottieAnimationView animationView, heartAnimation;
-    ConstraintLayout creditCard;
+    LottieAnimationView animationView, heartAnimation, addressAnimation;
+    ConstraintLayout creditCard, addressLayout;
 
 
     @Override
@@ -43,11 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
         animationView = findViewById(R.id.lottieAnimationView);
         heartAnimation = findViewById(R.id.heartAnimation);
+        addressAnimation = findViewById(R.id.select_address_animation);
 
         /*creditCard = findViewById(R.id.credit_card_layout);*/
 
         TextView textView = findViewById(R.id.previous_price_tv);
         textView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+
+        addressLayout = findViewById(R.id.address_one);
+        addressLayout.setOnClickListener(view -> selectAddressAnimation());
 
 
         startAnimations();
@@ -178,17 +182,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-    public void addCard(View view) {
-
-        /**
-         * Method to be used on click of add card button in alert_dialog_layout.xml
-         */
-
-    }
-
     public void addCardDialog(View view) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme);
@@ -207,7 +200,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectAddressAnimation() {
 
+        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f).setDuration(1000);
+        animator.addUpdateListener(valueAnimator -> addressAnimation.setProgress((Float) valueAnimator.getAnimatedValue()));
 
+        if (addressAnimation.getProgress() == 0f) {
+            animator.start();
+        } else {
+            addressAnimation.setProgress(0f);
+        }
 
     }
 }

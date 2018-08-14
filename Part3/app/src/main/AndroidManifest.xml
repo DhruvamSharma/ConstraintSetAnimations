@@ -21,7 +21,11 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".FinishActivity"></activity>
+        <activity android:name=".FinishActivity" />
+        <activity android:name=".SuccessActivity"
+            android:theme="@style/AppTheme.Transparent">
+
+        </activity>
     </application>
 
 </manifest>

@@ -2,7 +2,10 @@ package com.udafil.dhruvamsharma.part3;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,6 +24,7 @@ public class FinishActivity extends AppCompatActivity {
     CardAdapter adapter;
     RecyclerView mcardList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +38,7 @@ public class FinishActivity extends AppCompatActivity {
         mcardList.setLayoutManager(layoutManager);
 
 
-        adapter = new CardAdapter(preparePaymentData());
+        adapter = new CardAdapter(preparePaymentData(), this);
         mcardList.setAdapter(adapter);
 
 
@@ -68,4 +72,18 @@ public class FinishActivity extends AppCompatActivity {
     }
 
 
+    public void showSuccessActivity(View view) {
+
+        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, view, "transition");
+        int revealX = (int) (view.getX() + view.getWidth() / 2);
+        int revealY = (int) (view.getY() + view.getHeight() / 2);
+
+        Intent intent = new Intent(this, SuccessActivity.class);
+        intent.putExtra("x", revealX);
+        intent.putExtra("y", revealY);
+
+        ActivityCompat.startActivity(this, intent, optionsCompat.toBundle());
+
+
+    }
 }

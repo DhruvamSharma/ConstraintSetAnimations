@@ -59,11 +59,13 @@
         android:text="Make Payment"
         android:textColor="@color/ghostWhite"
         android:elevation="16dp"
+        android:onClick="showSuccessActivity"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/shop_card_layout"/>
+
 
 
 

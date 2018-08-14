@@ -253,7 +253,7 @@
 
 
     <include layout="@layout/adress_layout"
-        android:layout_height="125dp"
+        android:layout_height="150dp"
         android:layout_width="350dp"
         android:visibility="visible"
         android:id="@+id/address_one"
@@ -265,7 +265,7 @@
 
     <include layout="@layout/adress_layout"
 
-        android:layout_height="125dp"
+        android:layout_height="150dp"
         android:layout_width="350dp"
         android:visibility="visible"
         android:id="@+id/address_two"

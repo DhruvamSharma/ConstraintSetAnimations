@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/success_root"
+    android:background="@color/ghostWhite"
+    tools:context=".SuccessActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_bar_animation"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_fileName="loading.json"
+        android:alpha="1"
+        android:layout_margin="32dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/order_details_label"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_bar_animation_end"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_fileName="success.json"
+        android:visibility="gone"
+        android:layout_margin="32dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/order_details_label"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:text="Please wait while we fetch the OTP for the transaction "
+        android:id="@+id/retrieving_otp_label"
+        android:layout_margin="32dp"
+
+        app:layout_constraintStart_toStartOf="@id/progress_bar_animation"
+        app:layout_constraintTop_toBottomOf="@id/progress_bar_animation"
+        app:layout_constraintEnd_toEndOf="@id/progress_bar_animation"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:text="Order Details: "
+        android:id="@+id/order_details_label"
+        android:layout_margin="32dp"
+
+        app:layout_constraintStart_toStartOf="@id/progress_bar_animation"
+        app:layout_constraintBottom_toTopOf="@id/payable_amount_label" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="Payable Amaount: 36,000"
+        android:id="@+id/payable_amount_label"
+
+        app:layout_constraintStart_toStartOf="@id/order_details_label"
+        app:layout_constraintBottom_toTopOf="@id/tax_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="Tax Amount: 3200"
+        android:id="@+id/tax_label"
+
+        app:layout_constraintStart_toStartOf="@id/payable_amount_label"
+        app:layout_constraintBottom_toTopOf="@id/delivery_charges_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="TDelivery Amount: 200"
+        android:id="@+id/delivery_charges_label"
+
+        app:layout_constraintStart_toStartOf="@id/tax_label"
+        app:layout_constraintBottom_toTopOf="@id/total_ammount_label"/>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:text="Total Amount: 3200"
+        android:id="@+id/total_ammount_label"
+        android:layout_marginBottom="32dp"
+
+        app:layout_constraintStart_toStartOf="@id/delivery_charges_label"
+        app:layout_constraintBottom_toTopOf="@id/buy_button_btn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buton_background"
+        android:text="Shop More!"
+        android:textColor="#000"
+        android:id="@+id/buy_button_btn"
+        android:alpha="1"
+        android:onClick="shopMore"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
