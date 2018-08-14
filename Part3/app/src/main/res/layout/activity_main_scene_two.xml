@@ -274,21 +274,7 @@
         app:layout_constraintStart_toStartOf="@id/address_one"
         app:layout_constraintTop_toBottomOf="@id/address_one"/>
 
-    <Button
-        android:id="@+id/scene_two_add_card_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add a card"
-        android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button_border"
-        android:alpha="1"
-        android:layout_marginLeft="16dp"
 
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        app:fontFamily="@font/open_sans_light"
-        app:layout_constraintEnd_toEndOf="@id/address_one"
-        app:layout_constraintTop_toBottomOf="@id/address_one"/>
 
 
 
@@ -302,21 +288,33 @@
         android:textColor="#000"
         android:id="@+id/buy_button_btn"
         android:alpha="0"
+        android:visibility="gone"
 
-        app:layout_constraintStart_toEndOf="@id/cancel_button_ib"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/cancel_button_ib"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:text="Select a card"
-        android:background="#d71db8"
+        android:text="Pay 36,000"
         android:alpha="1"
+        android:background="#286991"
         android:textColor="#FFF"
 
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cancel_order_btn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel_order_btn"
+        android:background="@color/colorAccent"
+        android:text="Cancel"
+
+        app:layout_constraintStart_toEndOf="@id/cancel_button_ib"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/buy_button_btn"/>
 

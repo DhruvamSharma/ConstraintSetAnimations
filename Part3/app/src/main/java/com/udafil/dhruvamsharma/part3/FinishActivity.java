@@ -20,17 +20,12 @@ public class FinishActivity extends AppCompatActivity {
 
     CardAdapter adapter;
     RecyclerView mcardList;
-    LottieAnimationView submitButton;
-
-    ConstraintLayout layout, finalLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finish);
 
-        layout= findViewById(R.id.finish_root);
-        finalLayout = findViewById(R.id.credit_card_root);
 
         mcardList = findViewById(R.id.card_list_rv);
 
@@ -42,40 +37,8 @@ public class FinishActivity extends AppCompatActivity {
         adapter = new CardAdapter(preparePaymentData());
         mcardList.setAdapter(adapter);
 
-        //submitButton = findViewById(R.id.submit_button_animation);
-
-        /*submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startSubmitAnimation();
-            }
-        });*/
-
-        findViewById(R.id.submit_button).setOnClickListener(view -> {
 
 
-            View view1 = finalLayout;
-
-            Button button = findViewById(R.id.submit_button);
-
-
-
-            int startRadius = 0;
-            int endRadius = (int) Math.hypot(view1.getWidth(), view1.getHeight());
-
-
-            int cx = (int) (button.getX() + (button.getWidth()/2));
-            int cy = (int) (button.getY())+ button.getHeight() + 56;
-
-            Animator animator = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                animator = ViewAnimationUtils.createCircularReveal(view1, cx, cy, startRadius, endRadius);
-            }
-
-            if (animator != null) {
-                animator.start();
-            }
-        });
 
 
 
@@ -104,14 +67,5 @@ public class FinishActivity extends AppCompatActivity {
 
     }
 
-    private void startSubmitAnimation() {
-        ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f).setDuration(2000);
-        animator.addUpdateListener(valueAnimator -> submitButton.setProgress((Float) valueAnimator.getAnimatedValue()));
 
-        if (submitButton.getProgress() == 0f) {
-            animator.start();
-        } else {
-            submitButton.setProgress(0f);
-        }
-    }
 }

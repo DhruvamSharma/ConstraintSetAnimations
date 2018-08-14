@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_border"
         android:id="@+id/submit_button"
-        android:text="Submit"
+        android:text="Make Payment"
         android:textColor="@color/ghostWhite"
         android:elevation="16dp"
 

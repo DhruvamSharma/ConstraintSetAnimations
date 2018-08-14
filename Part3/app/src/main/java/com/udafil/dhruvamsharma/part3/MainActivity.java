@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     private void startAnimations() {
 
          Transition transition = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             transition = new ChangeBounds();
             transition.setInterpolator( new OvershootInterpolator());
         }
@@ -105,6 +105,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
+
+        });
+
+        findViewById(R.id.cancel_order_btn).setOnClickListener(view -> {
+
+            ConstraintSet constraintSet;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                TransitionManager.beginDelayedTransition((ViewGroup) findViewById(R.id.root), finalTransition);
+            }
+
+
+            constraintSet = constraintSetRoot;
+
+
+
+            constraintSet.applyTo((ConstraintLayout) findViewById(R.id.root));
 
         });
 
