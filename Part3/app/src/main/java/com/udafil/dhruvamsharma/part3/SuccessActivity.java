@@ -16,6 +16,7 @@ import com.airbnb.lottie.LottieAnimationView;
 
 import java.io.IOException;
 
+//Last Activity
 public class SuccessActivity extends AppCompatActivity {
 
     View rootLayout;
