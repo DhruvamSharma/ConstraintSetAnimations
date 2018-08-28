@@ -210,4 +210,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    public void selectAddress(View view) {
+
+        selectAddressAnimation();
+    }
 }

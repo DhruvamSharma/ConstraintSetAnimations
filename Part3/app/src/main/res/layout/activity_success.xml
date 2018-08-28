@@ -99,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:text="Total Amount: 3200"
+        android:text="Total Amount: 36,000"
         android:id="@+id/total_ammount_label"
         android:layout_marginBottom="32dp"
 

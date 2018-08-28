@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 ConstraintSet constraintSet;
                 TextView tView  = findViewById(R.id.kotlin_image_tv);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                    TransitionManager.beginDelayedTransition((ViewGroup) findViewById(R.id.root), finalTransition1);
+
                     if(set[0]) {
                         constraintSet = constraintSetFinish;
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
                     constraintSet.applyTo((ConstraintLayout) findViewById(R.id.root));
                     set[0] = !set[0];
-
+                    TransitionManager.beginDelayedTransition((ViewGroup) findViewById(R.id.root), finalTransition1);
 
                 }
 
