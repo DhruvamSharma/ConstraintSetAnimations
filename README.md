@@ -5,7 +5,7 @@ So animations have piqued the interest of a developer as well as a user but deve
 
 So today I’ll be trying to explain to you how we can build some awesome UI with amazing animations and in a very little amount of time.
 
-
+# If you want to check out the tutorial: [Link to the tutorial](https://medium.com/@dhruvamsharma/building-easy-animations-using-constraintsets-58515022bfe1)
 
 ### Pre-requisites
 Little knowledge of: <br>
