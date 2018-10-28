@@ -1,11 +1,9 @@
 # ConstraintSetAnimations
 
-Introduction
-------------
+### Introduction
 In this project, you will be able to see the power of animations and we will begin the journey of upgrading the transaction UI flow.
 
-Pre-requisites
---------------
+### Pre-requisites
 Little knowledge of: <br>
 Android <br>
 Constraint Layouts <br>
