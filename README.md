@@ -1,7 +1,5 @@
 # ConstraintSetAnimations
 
-============
-
 Introduction
 ------------
 In this project, you will be able to see the power of animations and we will begin the journey of upgrading the transaction UI flow.
@@ -14,11 +12,11 @@ Constraint Layouts <br>
 RecyclerView
 
 ### What will we be covering in this tutorial:
-Constraint Sets
-Constraint Layouts. Obviously.
-Transition Manager.
-Hold our breath.
-Count to 10 and write code.
+Constraint Sets<br>
+Constraint Layouts. Obviously.<br>
+Transition Manager.<br>
+Hold our breath.<br>
+Count to 10 and write code.<br>
 Voila! And it’s done!
 
 
