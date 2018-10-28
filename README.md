@@ -13,6 +13,15 @@ Android <br>
 Constraint Layouts <br>
 RecyclerView
 
+### What will we be covering in this tutorial:
+Constraint Sets
+Constraint Layouts. Obviously.
+Transition Manager.
+Hold our breath.
+Count to 10 and write code.
+Voila! And it’s done!
+
+
 Screenshots
 -----------
 
