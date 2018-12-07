@@ -38,3 +38,5 @@ If you've found an error in this sample, please file an issue.
 
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request through GitHub.
+
+Happy Coding!
