@@ -21,6 +21,8 @@ Hold our breath.<br>
 Count to 10 and write code.<br>
 Voila! And it’s done!
 
+see, easy, isn't it?
+
 
 Screenshots
 -----------
