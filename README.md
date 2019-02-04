@@ -1,7 +1,7 @@
 # ConstraintSetAnimations
 
 ### Introduction
-So animations have piqued the interest of a developer as well as a user but developers mostly run away because of all the complex code. Just like I did previously. But this time I made up my mind to let that fear go and settle this once and for all. In this project, you will be able to see the power of animations and we will begin the journey of upgrading the transaction UI flow.
+So animations have always piqued the interest of a developer as well as a user but developers mostly run away because of all the complex code. Just like I did previously. But this time I made up my mind to let that fear go and settle this once and for all. In this project, you will be able to see the power of animations and we will begin the journey of upgrading the transaction UI flow.
 
 So today I’ll be trying to explain to you how we can build some awesome UI with amazing animations and in a very little amount of time.
 
